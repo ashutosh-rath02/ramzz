@@ -37,7 +37,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ReactQueryProvider>
-            <main className="flex min-h-screen flex-col items-center">
+            <Header />
+            <main className="mt-20 flex min-h-screen flex-col items-center">
               {children}
               <Analytics />
             </main>

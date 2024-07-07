@@ -1,10 +1,8 @@
-import AuthButton from '../components/AuthButton'
-import ConnectSupabaseSteps from '../components/ConnectSupabaseSteps'
-import SignUpUserSteps from '../components/SignUpUserSteps'
 import Header from '../components/Header'
 import { cookies } from 'next/headers'
 import { createServerClient } from '../utils/supabase'
 import ThemeToggle from '../components/ThemeToggle'
+import Calendar from '@/components/Calendar/Calendar'
 
 export default async function Index() {
   const cookieStore = cookies()
@@ -25,10 +23,8 @@ export default async function Index() {
   return (
     <div className="flex w-full flex-1 flex-col items-center gap-20">
       <div className="flex max-w-4xl flex-1 flex-col gap-20 px-3">
-        <Header />
         <main className="flex flex-1 flex-col gap-6">
-          <h2 className="mb-4 text-4xl font-bold">Next steps</h2>
-          {isSupabaseConnected ? <SignUpUserSteps /> : <ConnectSupabaseSteps />}
+          <Calendar />
         </main>
       </div>
 

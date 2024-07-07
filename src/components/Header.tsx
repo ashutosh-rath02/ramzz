@@ -17,7 +17,7 @@ export default function Header() {
 
   const isSupabaseConnected = canInitSupabaseClient()
   return (
-    <header className="relative z-10 flex items-center justify-between bg-card px-4 py-3">
+    <header className="relative z-10 mx-auto flex max-w-5xl items-center justify-between bg-card px-4 py-3">
       <div className="text-lg font-semibold">Ramzz</div>
       <div className="flex items-center justify-center gap-4">
         <a
